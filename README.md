@@ -112,7 +112,7 @@ The **Travel Tracker** app includes smart error handling to ensure a smooth user
   **“Country does not exist, try again.”**
 
 - 🔁 **Duplicate Country Entry:**  
-  If a user tries to add a country that’s already been added before, an error message appears saying:  
+  If a user tries to add a country that’s already been added to his profile before, an error message appears saying:  
   **“Country has already been added, try again.”**
 
 - 🔡 **Case and Name Flexibility:**  
