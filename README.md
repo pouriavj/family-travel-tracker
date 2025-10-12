@@ -1,17 +1,18 @@
 # 🌍 Travel Tracker
 
 An interactive web application that lets users track and visualize the countries they’ve visited on a world map.  
-Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows users to add countries through an input form, automatically highlights them on the map, and stores all data in a database for persistent tracking.
+Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows multiple users (e.g., family members) to track their visited countries individually. Each user has a personal color, and switching between user tabs updates the map to show their specific visited countries.”
 
 ---
 
 ## ✨ Features
 
 - 🗺️ Interactive world map that highlights visited countries  
-- ➕ Add new countries via input form  
-- 📊 Displays total number of visited countries  
-- ⚠️ Error handling for invalid or duplicate country entries  
-- 💾 Data persistence with PostgreSQL  
+- 👥 Multiple user profiles (e.g., family members)  
+- 🎨 Each user chooses a custom map color  
+- 🗺️ Add visited countries for each user  
+- 📊 Displays total visited countries per user  
+
 
 ---
 
@@ -43,16 +44,28 @@ Follow these steps to set up the PostgreSQL database for **Travel Tracker**.
 2. Paste and run this SQL command:
 
 ```sql
-CREATE TABLE countries (
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    country_code CHAR(2),
-    country_name VARCHAR(100)
+    name VARCHAR(15) UNIQUE NOT NULL,
+    color VARCHAR(15)
 );
 
 CREATE TABLE visited_countries (
-    id SERIAL PRIMARY KEY,
-    country_code TEXT UNIQUE
+    id SERIAL,
+    country_code CHAR(2) NOT NULL,
+    user_id INTEGER REFERENCES users(id),
+    PRIMARY KEY (country_code, user_id)
 );
+
+INSERT INTO users (name, color)
+VALUES ('World Map', 'teal');
+
+-- Optional Join --
+
+SELECT *
+FROM visited_countries
+JOIN users
+ON users.id = user_id;
 ```
 3. Click Execute (▶️) to create the tables.
 
