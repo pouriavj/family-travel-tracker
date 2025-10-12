@@ -18,7 +18,7 @@ Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows mult
 
 ## 📸 Demo
 
-![Travel Tracker Screenshot](./travelTracker.jpg)  
+![Travel Tracker Screenshot](./familyTravelTracker.gif)  
 
 
 
