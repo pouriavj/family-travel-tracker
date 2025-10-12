@@ -7,11 +7,14 @@ Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows mult
 
 ## ✨ Features
 
-- 🗺️ Interactive world map that highlights visited countries  
-- 👥 Multiple user profiles (e.g., family members)  
-- 🎨 Each user chooses a custom map color  
-- 🗺️ Add visited countries for each user  
-- 📊 Displays total visited countries per user  
+- 👥 Multiple users with personalized profiles  
+- 🗺️ Interactive world map highlighting each user's visited countries in their chosen color  
+- 🎨 Each user selects a custom color when created  
+- ➕ Add new countries for the active user via input form  
+- 🔄 Easily switch between users to view their maps  
+- ⚠️ Smart error handling for invalid or duplicate country entries  
+- 💾 Data persistence with PostgreSQL  
+
 
 
 ---
