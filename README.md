@@ -110,21 +110,19 @@ const db = new pg.Client({
 ---
 ## ⚠️ Error Handling
 
-The **Travel Tracker** app includes smart error handling to ensure a smooth user experience:
-
-- 🏷️ **Invalid or Blank Input:**  
-  If a user submits an empty field or a country name that doesn’t exist in the database, an error message appears saying:  
-  **“Country does not exist, try again.”**
-
-- 🔁 **Duplicate Country Entry:**  
-  If a user tries to add a country that’s already been added to his profile before, an error message appears saying:  
-  **“Country has already been added, try again.”**
+The multi-user Travel Tracker app handles errors and edge cases automatically:
 
 - 🔡 **Case and Name Flexibility:**  
-  The app handles capitalization and partial name inputs intelligently — for example:  
-  - Typing “iran” instead of “Islamic Republic of Iran” 
-  - Typing “america” instead of “United States of America”  
-  All of these still work correctly because the app uses the **`LIKE`** SQL operator and **`toLowerCase()`** logic to match names flexibly.
+  Users can enter full or partial country names in any capitalization (e.g., "iran", "america", or "kongo"), and the app will correctly match using the SQL `LIKE` operator and lowercase comparison.
+
+- 🏷️ **Invalid or Unknown Country:**  
+  Attempting to add a country that does not exist in the database is caught by the application. (Currently logged in server console; can be extended for user-facing messages.)
+
+- 🔁 **Duplicate Country Per User:**  
+  The database schema enforces uniqueness per user (`PRIMARY KEY (country_code, user_id)`), so the same user cannot add the same country twice, while other users can still add it.
+
+- 👥 **User Context Awareness:**  
+  Each user's visited countries are tracked independently. Switching users updates the map and counts accordingly.
 
 ---
 ## 👥 Managing Users
