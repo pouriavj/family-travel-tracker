@@ -87,6 +87,8 @@ ON users.id = user_id;
 > 💡 **Tip:**  
 > - The `countries.csv` file must contain columns named `id`, `country_code`, and `country_name`.  
 > - The `id` column should be defined as `SERIAL PRIMARY KEY` so PostgreSQL will automatically continue numbering for any new rows inserted later.
+> - The `users` table stores each family member’s `name` and `color`.
+> - The `visited_countries` table links countries to specific users using the `user_id` foreign key.
 
 ---
 
