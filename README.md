@@ -127,6 +127,14 @@ The **Travel Tracker** app includes smart error handling to ensure a smooth user
   All of these still work correctly because the app uses the **`LIKE`** SQL operator and **`toLowerCase()`** logic to match names flexibly.
 
 ---
+## 👥 Managing Users
+
+- Select an existing user from the dropdown to view their visited countries.  
+- Click **“Add New User”** to create a new profile — enter a name and pick a color.  
+- Each user’s map is automatically highlighted using their selected color.
+
+---
+
 ## ⚙️ How to Run
 
 1. **Clone the repository**
