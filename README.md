@@ -1,4 +1,4 @@
-# 🌍 Travel Tracker
+# 🌍 Family Travel Tracker
 
 An interactive web application that lets users track and visualize the countries they’ve visited on a world map.  
 Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows multiple users (e.g., family members) to track their visited countries individually. Each user has a personal color, and switching between user tabs updates the map to show their specific visited countries.”
