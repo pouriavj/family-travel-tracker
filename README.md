@@ -1,5 +1,13 @@
 # 🌍 Family Travel Tracker
 
+![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-4.18-black?logo=express)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
+![EJS](https://img.shields.io/badge/EJS-3.1-red?logo=ejs)
+![ES6](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
 An interactive web application that lets users track and visualize the countries they’ve visited on a world map.  
 Built with **Node.js**, **Express**, **EJS**, and **PostgreSQL**, it allows multiple users (e.g., family members) to track their visited countries individually. Each user has a personal color, and switching between user tabs updates the map to show their specific visited countries.”
 
