@@ -5,7 +5,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
 ![EJS](https://img.shields.io/badge/EJS-3.1-red?logo=ejs)
 ![ES6](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
-![License](https://img.shields.io/badge/license-MIT-green)
+
 
 
 An interactive web application that lets users track and visualize the countries they’ve visited on a world map.  
